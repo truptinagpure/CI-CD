@@ -1,0 +1,9 @@
+<svg id="arrow-right" xmlns="http://www.w3.org/2000/svg" width="14.218" height="11.212">
+    <defs>
+        <style>
+            .cls-1{fill:#fff;fill-rule:evenodd}
+        </style>
+    </defs>
+    <path id="Path_47" data-name="Path 47" class="cls-1" d="M.835.56a.8.8 0 0 1 1.134 0l4.8 4.8a.8.8 0 0 1 0 1.134l-4.8 4.8a.8.8 0 1 1-1.134-1.125l4.239-4.238L.835 1.694a.8.8 0 0 1 0-1.134z" transform="translate(7.209 -.325)"/>
+    <path id="Path_48" data-name="Path 48" class="cls-1" d="M5.2 1.276a.8.8 0 0 1 .8-.8h11.816a.8.8 0 1 1 0 1.6H6a.8.8 0 0 1-.8-.8z" transform="translate(-5.2 4.331)"/>
+</svg>

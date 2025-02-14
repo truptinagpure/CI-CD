@@ -1,0 +1,17 @@
+*/config/development
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
+*/cache/!.htaccess
+.htaccess
+/somaiya/logs/*
+/somaiya/language/English/*
+/somaiya/language/Hindi/*
+/somaiya/language/Marathi/*
+/upload_file/images20/*
+/upload_file/banner_images/*
+/upload_file/videos/*
+/node_modules
+/npm-shrinkwrap.json
+node_modules

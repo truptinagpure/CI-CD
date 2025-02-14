@@ -1,0 +1,67 @@
+@import '_partials/variables';
+@import '_partials/utilities';
+@import '_partials/mixins';
+@import '_partials/fonts';
+
+
+
+.video-wrap {
+    .vdate {
+        &:before {
+            content: "\f274";
+            font-family: FontAwesome;
+            left: 10px;
+            margin-right: 5px;
+        }
+    }
+    margin-bottom: 20px;
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+    .vtitle {
+    font-family: open_sansbold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 16px;
+}
+.vdate {
+    font-family: open_sansbold;
+    font-size: 14px;
+}
+}
+
+
+
+.select2-selection--multiple {
+    &:before {
+        content: "";
+        border-color: #888 transparent transparent transparent;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        width: 0;
+        right: 10px;
+        cursor: pointer;
+    }
+}
+
+li.select2-search.select2-search--inline
+{
+    font-family: 'open_sansregular';
+  
+    line-height: 28px;
+}
+
+
+.select2-container--default {
+    .select2-search--inline {
+        .select2-search__field {
+            padding-left: 10px!important;
+        }
+    }
+}

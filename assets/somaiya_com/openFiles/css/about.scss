@@ -1,0 +1,130 @@
+@import '_partials/variables';
+@import '_partials/utilities';
+@import '_partials/mixins';
+@import '_partials/fonts';
+// About CSS
+// Banner Sections
+.BannerSections {
+    overflow:hidden;
+    .bannerText {
+        position: absolute;
+        bottom: 50px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        padding: 0 20px;
+        border-left: 4px solid #f38400;
+        h1 {
+            @include bodytext($font_48, $latoBlack, $white, 34px);
+            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.32);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .siteBreadCrum {
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                list-style: none;
+                @include bodytext($font_14, $openSansBold, $white, 32px);
+                a {
+                    @include bodytext($font_14, $openSansBold, $white, 32px);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .divider {
+                img {
+                    display: inline-block;
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+}
+
+// Content Sections
+.aboutSections {
+    padding: 60px 0;
+    background: url('../img/about/leafpatch.png') no-repeat;
+    background-position: left -55px bottom 60px;
+    p {
+        @include bodytext($font_22,
+        $openSans,
+        $black,
+        37px);
+        letter-spacing: 0.55px;
+        margin-bottom: 0;
+        a {
+            color: $blue;
+        }
+    }
+    .aboutImageWrapper {
+        position: relative;
+        background: url('../img/about/boxpattern.png') no-repeat;
+        background-position: top left;
+        padding: 10px 0 0px 20px;
+    }
+    .aboutPageContent {
+        padding-left: 30px;
+        padding-top: 30px;
+        p {
+            @include bodytext($font_18,
+            $openSans,
+            $black,
+            32px);
+            letter-spacing: 0.45px;
+        }
+    }
+}
+@media(max-width:1024px) {
+.BannerSections .bannerText h1 {
+    font-size: 42px;}
+}
+
+@media(max-width:991px) {
+    .aboutSections .aboutPageContent {
+        padding-left: 0;
+           }
+    .aboutSections .aboutPageContent p{font-size: 14px;line-height: 26px;
+        letter-spacing: .25px;}
+        .aboutSections p {
+            font-size: 14px;
+             line-height: 26px;
+            letter-spacing: .25px;
+         }s
+         .aboutSections {
+            padding: 30px 15px;}
+        .siteBreadCrum li img{height: auto;}    
+        .BannerSections .bannerText {
+            bottom: 20px;
+            left: 25px;
+            right: 0;
+            padding: 0 10px;
+      }
+      .BannerSections .bannerText h1 {
+        font-size: 32px;
+        line-height: 24px;}
+        }
+
+    @media(max-width:767px) {
+        .BannerSections .bannerText h1 {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 0px;            
+        }
+        .BannerSections .bannerText {
+            bottom: 14px;
+            padding: 0px 10px;
+            left: 15px;        
+        }
+        .BannerSections .bannerText .siteBreadCrum li{line-height: initial;}
+        .BannerSections img, .BannerSections{height: 180px;}
+        .aboutSections .aboutPageContent {
+        padding-left: 15px;
+           }
+        
+    }

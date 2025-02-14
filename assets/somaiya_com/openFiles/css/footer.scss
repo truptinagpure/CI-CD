@@ -1,0 +1,258 @@
+@import '_partials/variables';
+@import '_partials/utilities';
+@import '_partials/mixins';
+@import '_partials/fonts';
+// Footer CSS
+footer {
+    overflow: hidden;
+    background-color: $grey;
+    .footLeft {
+        padding-top: 30px;
+        @media(max-width: 767px) {
+            text-align: center;
+        }
+        .trustLOgo {
+            a {
+                display: inline-block;
+                margin-bottom: 20px;
+                @media(max-width: 991px) {
+                    margin-bottom: 25px;
+                }
+                img {
+                    width: 75px;
+                    @media(max-width: 991px) {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+        .address {
+            margin-bottom: 30px;
+            overflow: hidden;
+            @media(max-width: 1280px) {
+                margin-bottom: 20px;
+            }
+            h4 {
+                display: none;
+                @media(max-width: 767px) {
+                    text-align: center;
+                    @include bodytext($font_14, $latoBlod, $white, 24px);
+                    letter-spacing: 0.34px;
+                    margin: 0 0 10px;
+                    padding: 0;
+                    text-transform: uppercase;
+                    position: relative;
+                    margin: 0;
+                    display: block;
+                }
+            }
+            .markerWrap {
+                width: 20px;
+                float: left;
+                @media(max-width: 767px) {
+                    display: none;
+                }
+            }
+            p {
+                width: calc(100% - 35px);
+                @include bodytext($font_14, $openSans, $white, 28px);
+                margin: 0;
+                float: right;
+                @media(max-width: 767px) {
+                    width: 100%;
+                }
+            }
+        }
+        .socialMeida {
+            margin-bottom: 30px;
+            @media(max-width: 767px) {
+                margin-top: 20px;
+            }
+            h4 {
+                @include bodytext($font_14, $latoBlod, $white, 24px);
+                letter-spacing: 0.34px;
+                margin: 0 0 10px;
+                padding: 0;
+                text-transform: uppercase;
+                position: relative;
+                @media(max-width: 767px) {
+                    margin: 0;
+                }
+                span {
+                    background: $grey;
+                    padding-right: 15px;
+                    display: inline-block;
+                    position: relative;
+                    z-index: 9;
+                    @media(max-width: 767px) {
+                        padding-right: 0;
+                    }
+                }
+                &:after {
+                    content: '';
+                    height: 1px;
+                    background: rgba(255, 255, 255, 0.25);
+                    width: 60%;
+                    display: block;
+                    position: absolute;
+                    top: 45%;
+                    right: 20%;
+                    @media(max-width: 767px) {
+                        display: none;
+                    }
+                }
+            }
+            ul {
+                li {
+                    a {
+                        margin-right: 5px;
+                        display: inline-block;
+                        i {
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            border-radius: 50%;
+                            display: inline-block;
+                            font-size: $font_22;
+                            color: $white;
+                            @include objecttransition(all, ease, 0.3s);
+                        }
+                        .fa-facebook {
+                            &:hover {
+                                background-color: #4267B2;
+                            }
+                        }
+                        .fa-twitter {
+                            &:hover {
+                                background-color: #1DA1F2;
+                            }
+                        }
+                        .fa-instagram {
+                            &:hover {
+                                background: #f09433;
+                                background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                                background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                                background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                            }
+                        }
+                        .fa-youtube-play {
+                            &:hover {
+                                background-color: #FF0000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footMenu {
+        h4 {
+            @include bodytext($font_14, $latoBlod, $white, 24px);
+            letter-spacing: 0.34px;
+            margin: 0 0 10px;
+            padding: 0;
+            text-transform: uppercase;
+            position: relative;
+            @media(max-width: 767px) {
+                margin: 0;
+            }
+            span {
+                background: $grey;
+                padding-right: 15px;
+                display: inline-block;
+                position: relative;
+                z-index: 9;
+                @media(max-width: 767px) {
+                    padding-right: 0;
+                }
+                a {
+                    @include bodytext($font_14, $latoBlod, $white, 24px);
+                    letter-spacing: 0.34px;
+                    text-decoration: none;
+                }
+            }
+            &:after {
+                content: '';
+                height: 1px;
+                background: rgba(255, 255, 255, 0.25);
+                width: 60%;
+                display: block;
+                position: absolute;
+                top: 45%;
+                right: 20%;
+                @media(max-width: 767px) {
+                    display: none;
+                }
+            }
+        }
+        ul {
+            margin: 0 0 40px;
+            @media(max-width: 767px) {
+                margin: 0 0 20px;
+            }
+            li {
+                list-style: none;
+                a {
+                    @include bodytext($font_12, $openSans, $white, 19px);
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .aboutUsMenu {
+            margin-top: 25px;
+        }
+    }
+    .creditpatch {
+        background: $darkGrey;
+        padding: 14px 0;
+        .credits {
+            @include bodytext($font_12, $openSans, $white, 18px);
+        }
+    }
+}
+
+// Top arrow click  
+.toparrow {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    opacity: 0;
+    @include objecttransition(all, ease, 0.3s);
+    @media(max-width: 767px) {
+        right: 20px;
+    }
+    a {
+        background-color: #fff;
+        display: inline-block;
+        text-align: center;
+        height: 30px;
+        line-height: 22px;
+        width: 30px;
+        border-radius: 5px;
+        border: solid 1px #fff;
+        box-shadow: 0 10px 23px 0 rgba(0, 0, 0, 0.16);
+        @include objecttransition(all, ease, 0.3s);
+        img {
+            display: inline-block;
+        }
+        &:hover {
+            background: #ff9800;
+            border-color: #ff9800;
+            img {
+                filter: brightness(0) invert(1);
+                -ms-filter: brightness(0) invert(1);
+                -moz-filter: brightness(0) invert(1);
+                -webkit-filter: brightness(0) invert(1);
+                -o-filter: brightness(0) invert(1);
+            }
+        }
+    }
+}
+
+.toparrow.showbtn {
+    opacity: 1;
+}

@@ -1,0 +1,259 @@
+@import '_partials/variables';
+@import '_partials/utilities';
+@import '_partials/mixins';
+@import '_partials/fonts';
+.BannerSections .bannerText.archivBannerText {
+    left: 24px;
+}
+
+.main-sec {
+    margin: 60px 0;
+}
+
+.tabs-sec {
+    width: 100%;
+    border: solid 1px rgba(112, 112, 112, 0.2);
+    position: relative;
+}
+
+.tabs-sec::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -24px;
+    height: 100%;
+    border-right: solid 1px rgba(112, 112, 112, 0.2);
+}
+
+.toggle-tabs {
+    width: 100%;
+    position: relative;
+}
+
+.toggle-tabs.current::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: solid 4px #f38400;
+    height: 100%;
+    z-index: 1;
+}
+
+.toggle-tabs.current .title {
+    color: #1c4bff;
+    background-color: #f4f4f4;
+}
+
+.toggle-tabs.current .title::after {
+    transform: rotate( 0deg);
+}
+
+.toggle-tabs .title {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: #000000;
+    padding: 26px 25px 25px 19px;
+    position: relative;
+    border-bottom: solid 1px rgba(112, 112, 112, 0.2);
+    cursor: pointer;
+    text-align: left;
+}
+
+.toggle-tabs .title::after {
+    content: '';
+    position: absolute;
+    top: 36px;
+    right: 18px;
+    background-image: url(/assets/somaiya_com/img/archives/img/arrow-right.svg);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 7px;
+    transform: rotate( -90deg);
+    transition: ease-in 0.2s;
+}
+
+.dropdown-content .nav-item {
+    width: 100%;
+}
+
+.dropdown-content .nav-item .nav-link {
+    padding: 10px 10px 10px 40px;
+    text-decoration: none !important;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #000 !important;
+    font-family: open_sansregular;
+    border: 0;
+    border-bottom: solid 1px rgba(112, 112, 112, 0.2);
+}
+
+.dropdown-content .nav-item:last-child .nav-link {
+    border-bottom: 0;
+}
+
+.dropdown-content .nav-item .nav-link.active {
+    border-color: rgba(112, 112, 112, 0.2);
+    font-family: open_sansbold;
+    background-color: unset;
+}
+
+.tabs-detail {
+    width: 100%;
+    padding-left: 24px;
+}
+
+.reports {
+    display: inline-block;
+    width: 100%;
+    height: 153px;
+    background-image: linear-gradient(to bottom, #fff, #ededed 72%, #f4f4f4);
+    padding: 15px 12px 13px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+}
+
+.reports:hover {
+    background-image: url(/assets/somaiya_com/img/archives/img/bg-img.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    height: 153px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+.reports .text {
+    font-family: latoblack;
+    color: #000;
+    font-size: 8px;
+    line-height: 2.63;
+}
+
+.reports .main-text {
+    font-family: latobold;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.5;
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+/**** Somaiya Vidyavihar Press start ****/
+
+.flipbookyear-content {
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px #dee2e6;
+}
+
+.flipbooksyear {
+    padding: 15px;
+}
+
+.flipbooksyear:nth-child(odd) {
+    background-color: #ffffff
+}
+
+.flipbooksyear:nth-child(even) {
+    background-color: rgba(230, 235, 237, 0.7);
+}
+
+.flipbooksyear .heading {
+    display: flex;
+    align-items: center;
+}
+
+.flipbooksyear .heading .text {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: normal;
+    font-family: latobold;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.flipbooksyear a {
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: open_sansregular;
+}
+
+.flipbooksyear a:hover {
+    color: #1c4bff;
+    font-weight: bold;
+}
+
+.press-tabs .toggle-tabs .title::after {
+    display: none;
+}
+
+.flipbooksyear .lists {
+    column-count: 10;
+    padding: 0;
+    margin: 0;
+}
+
+.flipbooksyear .lists li {
+    list-style-type: none;
+}
+
+
+/**** Somaiya Vidyavihar Press end ****/
+
+
+/**** Media Queries ****/
+
+@media(max-width:768px) {
+    .BannerSections .bannerText.archivBannerText {
+        left: 12px;
+    }
+}
+
+@media(max-width:500px) {
+    .BannerSections .bannerText.archivBannerText {
+        margin: 0;
+        width: 93%;
+        margin-left: 2px;
+    }
+    .main-sec {
+        margin: 60px 0 40px;
+    }
+    .tabs-sec::after {
+        display: none;
+    }
+    .toggle-tabs .title {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+    .toggle-tabs .title::after {
+        top: 20px;
+    }
+    .dropdown-content .nav-item .nav-link {
+        padding: 10px 10px 10px 25px;
+        font-size: 16px;
+    }
+    .tabs-detail {
+        padding: 0;
+        margin-top: 24px;
+    }
+    .reports {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .flipbooksyear {
+        padding: 12px 15px;
+    }
+    .flipbooksyear .lists {
+        display: block;
+        column-count: 5;
+    }
+    .flipbooksyear .lists li {
+        line-height: 2.2;
+    }
+}

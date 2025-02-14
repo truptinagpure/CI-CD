@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1354" height="189">
+    <defs>
+        <linearGradient id="linear-gradient" x1=".294" y1=".938" x2=".82" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#638aef"/>
+            <stop offset=".542" stop-color="#9c27b0"/>
+            <stop offset=".803" stop-color="#dea5a6"/>
+            <stop offset=".892" stop-color="#e8be9c"/>
+            <stop offset="1" stop-color="#dec5de"/>
+        </linearGradient>
+        <clipPath id="clip-path">
+            <path id="bg" class="cls-1" transform="translate(0 .271)" d="M0 0h1354v189H0z"/>
+        </clipPath>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}
+        </style>
+    </defs>
+    <g id="bg-2" data-name="bg" transform="translate(0 -.271)" style="opacity:.3;clip-path:url(#clip-path)">
+        <g id="Group_4" data-name="Group 4" transform="translate(-150.393 20.426)">
+            <path id="Path_9" data-name="Path 9" class="cls-1" d="M1478.73 57.612s-130.156-12.953-308.567-50.43-278.511 34.351-474.08 50.43-416.145-89.824-575.332-50.43S5.581 179.27 5.581 179.27s1529.218.6 1529.218-1.434-56.069-120.224-56.069-120.224z" transform="translate(32.906 3.509)"/>
+            <path id="Path_8" data-name="Path 8" class="cls-1" d="M1581.541 0s-159.633 59.677-309.6 35.573S990.724-4.73 755.854 71.781s-381.889-82.51-623.7-41.088-77.8 166.146-77.8 166.146 1527.189-8.951 1527.189-12.714z" transform="translate(0 72.884)"/>
+        </g>
+    </g>
+</svg>

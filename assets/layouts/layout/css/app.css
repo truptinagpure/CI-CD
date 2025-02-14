@@ -1,0 +1,81 @@
+/***Announcement, Events, Media Coverage, Press releases module css changes***/
+.form-horizontal .control-label {
+    font-weight: 600;
+    margin: 0;
+    font-size: 14px !important;
+}
+.cardwrappers .form-horizontal .control-label{
+	padding: 0;
+	padding-top: 6px;
+}
+.checkbox, .form-horizontal .checkbox{
+	cursor: pointer;
+}
+.cardwrappers .croppie-input{
+    font-size: 14px !important;
+    margin: 10px;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.margin0{
+	margin:0 !important;
+}
+.datetextbox{
+	height: 36px;
+    padding: 6px 12px;
+    background-color: #fff;
+    border: 1px solid #c2cad8;
+    border-radius: 4px;
+    width: 78%;
+    margin-left: 15px;
+}
+.wid60date{
+	width: 61%;
+}
+.croppie-input{
+    font-size: 14px !important;
+    margin: 10px;
+    padding: 10px;
+    margin: 0;
+}
+a + .tooltip > .tooltip-inner {
+    background-color: #000;width:200px;padding:10px;
+}
+.tooltip-arrow,
+.tooltip.right .tooltip-arrow {
+    border-right: 5px solid #000;
+}
+a[data-toggle ="tooltip"] i{
+	padding: 2px 6px;
+    background-color: #337ab9;
+    color: white;
+    border-radius: 50%;
+    /* display: none !important; */
+    font-size: 12px;
+}
+a[data-toggle ="tooltip"] .fa-info-circle:before {
+    content: "\f129" !important;
+}
+.table-scrollable>.table>tbody>tr>th, .table-scrollable>.table>tfoot>tr>td, .table-scrollable>.table>tfoot>tr>th, .table-scrollable>.table>thead>tr>th {
+    white-space: initial;
+}
+.notes{
+    margin: 0 0 20px 0;
+}
+.notes-list{
+    margin:0;
+    padding:0 0 0 20px;
+}
+.notes-list li{
+    margin-bottom: 15px;
+}    
+.notes-heading{
+    color: #c7254e;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

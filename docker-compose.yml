@@ -1,0 +1,43 @@
+volumes:
+  datafiles:
+
+networks:
+  my-network:
+    driver: bridge
+
+services:
+  mysql:
+    image: mysql:8.0.36
+    container_name: codeigniter-db-new
+    environment:     
+      MYSQL_ROOT_PASSWORD: test123
+      MYSQL_DATABASE: somaiya_com_stage
+      MYSQL_USER: arigel
+      MYSQL_PASSWORD: "t)2D#+qDgkG8U-MN"
+    ports:
+      - "3306:3306"
+    networks:
+      - my-network
+    volumes:
+      - datafiles:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+
+  website:
+    container_name: codeigniter-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_DBHOST: somaiya-edu.cfuahjovyrht.ap-south-1.rds.amazonaws.com  # Update to match service name within Docker
+      MYSQL_DATABASE: somaiya_com_stage
+      MYSQL_DBPORT: 3306
+      MYSQL_DBUSER: arigel
+      MYSQL_DBPASS: "t)2D#+qDgkG8U-MN"
+    networks:
+      - my-network
+    ports:
+      - "8080:80"
+      - "8083:443"
+    depends_on:
+      - mysql

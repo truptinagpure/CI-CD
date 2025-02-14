@@ -1,0 +1,141 @@
+@import '_partials/variables';
+@import '_partials/mixins';
+@import '_partials/fonts';
+.noBg {
+    background-color: transparent !important;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//DOts geometric circles for verticals page
+.purplePattern {
+    // background: url('../img/patterns/purplepattern.png') no-repeat;
+    // background-position: 70px 20px;
+    // background-size: 260px;
+}
+
+.greenPattern {
+    // background: url('../img/patterns/greenpattern.png') no-repeat;
+    // background-position: 70px 20px;
+    // background-size: 260px;
+}
+
+.greybackground.greenPattern {
+    // background: url('../img/patterns/greenpattern.png') no-repeat #f2f2f2;
+    // background-position: right 55px top 80px;
+    // background-size: 260px;
+}
+
+.orangePattern {
+    // background: url('../img/patterns/orangepattern.png') no-repeat;
+    // background-position: 70px 20px;
+    // background-size: 260px;
+}
+
+.brownPattern {
+    // background: url('../img/patterns/brownpattern.png') no-repeat;
+    // background-position: 70px 20px;
+    // background-size: 260px;
+}
+
+.greybackground.brownPattern {
+    // background: url('../img/patterns/brownpattern.png') no-repeat #f2f2f2;
+    // background-position: right 55px top 80px;
+    // background-size: 260px;
+}
+
+.bluePattern {
+    // background: url('../img/patterns/bluepattern.png') no-repeat;
+    // background-position: 70px 20px;
+    // background-size: 260px;
+}
+
+.greybackground {
+    padding: 55px 0;
+    background: #f2f2f2;
+}
+
+// Resetting container as per design
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    @media (min-width: 1400px) {
+        max-width: 1140px;
+    }
+    @media(max-width: 991px) {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+// Homepage Sections titles
+.title {
+    @include bodytext($font_40, $latoBlod, $black, 36px);
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    @media(max-width: 991px) {
+        font-size: 20px;
+        letter-spacing: 0.6px;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+}
+
+// Links
+.link {
+    @include bodytext($font_18, $openSansBold, $blue, 20px);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #2962ff;
+}
+
+.link img {
+    margin-left: 10px;
+}
+
+.link:hover {
+    @include objecttransition(all, ease, 0.3s);
+    text-decoration: none;
+}
+
+.link:hover img {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    @include objecttransition(all, ease, 0.3s);
+}
+
+
+//============================ FONT AWESOME RESETS ==========================
+
+.fa-twitter {
+    font-family: 'twitter' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-twitter:before {
+    content: "\e900";
+}
+
+//============================ FONT AWESOME RESETS ==========================

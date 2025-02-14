@@ -1,0 +1,138 @@
+#
+# *******************************************************************************************************
+# * Standard Type
+# *******************************************************************************************************
+# ID[This is just a number and use it in database]:
+#   id: [Repeat ID]
+#   name: "[Choose a name for select in admin side]"
+#   extensions_fields:
+#     icon |>choose an icon for extensions in admin side
+#     image |>upload an image for extensions in admin side
+#     description |>insert a long text for extensions in admin side
+#     full_description |>insert another long text for extensions in admin side
+#   theme: '[Used in page(Root: called in main template php file)]'
+#   theme_preview: '[Used in index(Root: views/)]'
+#   theme_extension: '[Used in one extension view(Root: called in main template php file)]'
+#   theme_ajax: '[Used in ajax extension load(Root: called in main template php file)]'
+# *******************************************************************************************************
+# * You can add new item here and use in your controller file
+#
+1:
+  id: 1
+  name: "About Section"
+  fields:
+    extension:
+      icon
+      description
+      order
+    page:
+      order
+      image
+  preview:
+    limit: 1
+  theme: "page_type/about"
+
+2:
+  id: 2
+  name: "Announcements Section"
+  fields:
+    extension:
+      icon
+      description
+      order
+    page:
+      order
+      image
+  preview:
+    limit: 1
+  theme: "page_type/announcement"
+
+3:
+  id: 3
+  name: "Timeline Section"
+  fields:
+    extension:
+      icon
+      description
+      order
+    page:
+      order
+      image
+  preview:
+    limit: 1
+  theme: "page_type/timeline"
+
+4:
+  id: 4
+  name: "Latest News Section"
+  fields:
+    extension:
+      icon
+      description
+      order
+    page:
+      order
+      image
+  preview:
+    limit: 1
+  theme: "page_type/latestnews"
+
+5:
+  id: 5
+  name: "Slider Template"
+  fields:
+    extension:
+      icon
+      description
+      order
+    page:
+      order
+      image
+  preview:
+    limit: 1
+  theme: "page_type/slider"
+
+6:
+  id: 6
+  name: "Somaiya Press"
+  fields:
+    extension:
+      icon
+      description
+      order
+    page:
+      order
+      image
+  preview:
+    limit: 1
+  theme: "page_type/press"
+
+7:
+  id: 7
+  name: "Somaiya Press Copy"
+  fields:
+    extension:
+      icon
+      description
+      order
+    page:
+      order
+      image
+  preview:
+    limit: 1
+  theme: "page_type/press_copy"
+
+8:
+  id: 8
+  name: "video template"
+  fields:
+    extension:
+      icon
+      description
+      order
+    page:
+      order
+      image
+  preview:
+    limit: 1
+  theme: "page_type/latestvideos"
