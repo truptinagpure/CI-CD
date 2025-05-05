@@ -5,10 +5,5 @@
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule ^(.*)$ index.php?/$1 [L]
 
-	SetEnv CI_DB_HOST localhost
-	SetEnv CI_DB_NAME edu
-	SetEnv CI_DB_USER root
-	SetEnv CI_DB_PASSWORD root123
-	SetEnv PUBLICDOMAIN localhost
-
+	
 </IfModule>
