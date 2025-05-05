@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirect root URL to /en
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /en/ [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
