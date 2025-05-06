@@ -73,25 +73,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-$current_url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-    $db['default'] = array(
-        'dsn'   => '',
-        'hostname' => 'somaiya-edu.cfuahjovyrht.ap-south-1.rds.amazonaws.com',
-        'username' => 'arigel',
-        'password' => 't)2D#+qDgkG8U-MN',
-        'database' => 'somaiya_com_stage',
-        'dbdriver' => 'mysqli',
-        'dbprefix' => '',
-        'pconnect' => FALSE,
-        'db_debug' => (ENVIRONMENT !== 'production'),
-        'cache_on' => FALSE,
-        'cachedir' => '',
-        'char_set' => 'utf8',
-        'dbcollat' => 'utf8_general_ci',
-        'swap_pre' => '',
-        'encrypt' => FALSE,
-        'compress' => FALSE,
-        'stricton' => FALSE,
-        'failover' => array(),
-        'save_queries' => TRUE
-    );
+$env = getenv('ENV') ?: 'production';
+$hostname = ($env === 'local') 
+    ? (getenv('MYSQL_DBHOST') ?: 'mysql') 
+    : 'somaiya-edu.cfuahjovyrht.ap-south-1.rds.amazonaws.com';
+
+$username = ($env === 'local') 
+    ? (getenv('MYSQL_DBUSER') ?: 'arigel') 
+    : 'arigel';
+
+$password = ($env === 'local') 
+    ? (getenv('MYSQL_DBPASS') ?: 't)2D#+qDgkG8U-MN') 
+    : 't)2D#+qDgkG8U-MN';
+
+$database = ($env === 'local') 
+    ? (getenv('MYSQL_DATABASE') ?: 'somaiya_com_stage') 
+    : 'somaiya_com_stage';
+
+$db['default'] = array(
+    'dsn'      => '',
+    'hostname' => $hostname,
+    'username' => $username,
+    'password' => $password,
+    'database' => $database,
+    'dbdriver' => 'mysqli',
+    'dbprefix' => '',
+    'pconnect' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt'  => FALSE,
+    'compress' => FALSE,
+    'stricton' => FALSE,
+    'failover' => array(),
+    'save_queries' => TRUE
+);
