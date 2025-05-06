@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 /**
  * CodeIgniter
  *
@@ -63,7 +61,7 @@ if(!is_readable('somaiya/config/database.php')){
  */
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define('ENVIRONMENT', 'development');
-} else if ($_SERVER['SERVER_NAME'] == 'stage.somaiya.com') {
+} else if ($_SERVER['SERVER_NAME'] == '43.205.224.64:8000') {
     define('ENVIRONMENT', 'development');
 } else {
     define('ENVIRONMENT', 'production');
