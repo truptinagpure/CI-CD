@@ -90,15 +90,15 @@ $database = ($env === 'local')
     ? (getenv('MYSQL_DATABASE') ?: 'somaiya_com_stage') 
     : 'somaiya_com_stage';
 
-echo $hostname;
-echo "--";
-echo $username;
-echo "--";
-echo $password;
-echo "--";
-echo $database;
-echo "--";
-exit();
+// echo $hostname;
+// echo "--";
+// echo $username;
+// echo "--";
+// echo $password;
+// echo "--";
+// echo $database;
+// echo "--";
+// exit();
 
 $db['default'] = array(
     'dsn'      => '',
