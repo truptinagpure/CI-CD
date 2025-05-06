@@ -59,13 +59,15 @@ if(!is_readable('somaiya/config/database.php')){
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-if ($_SERVER['SERVER_NAME'] == 'localhost') {
-    define('ENVIRONMENT', 'development');
-} else if ($_SERVER['SERVER_NAME'] == '43.205.224.64:8000') {
-    define('ENVIRONMENT', 'development');
-} else {
-    define('ENVIRONMENT', 'production');
-}
+// if ($_SERVER['SERVER_NAME'] == 'localhost') {
+//     define('ENVIRONMENT', 'development');
+// } else if ($_SERVER['SERVER_NAME'] == '43.205.224.64:8000') {
+//     define('ENVIRONMENT', 'development');
+// } else {
+//     define('ENVIRONMENT', 'production');
+// }
+
+define('ENVIRONMENT', 'development');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
