@@ -70,9 +70,6 @@ class Somaiya_general extends Somaiya_Controller {
     function index($ln=null)
     {  
 
-        echo "Controller loaded.";
-        exit();
-         
         $this->preset($ln);
         if($ln == '') 
         {
