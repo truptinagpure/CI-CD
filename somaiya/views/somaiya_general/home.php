@@ -141,7 +141,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title capital" >About the group</h2>
+                        <h2 class="title capital" >About the group 1</h2>
                         <img class="fimg"  data-aos-duration="1500" src="/assets/somaiya_com/img/Shri-K.-J.-Somaiya.png" alt="">
                         <div class="col-md-7 col-lg-4">
                             <p>One of the oldest and well-established business houses in India, the Somaiya Group has diversified interests in foods, biofuel, speciality chemicals, education, healthcare, rural development and agricultural research. </p>
