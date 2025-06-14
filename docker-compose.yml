@@ -32,7 +32,7 @@ services:
     container_name: codeigniter-app
     environment:
       ENV: local  # Change to 'production' on AWS
-      MYSQL_DBHOST: somaiya-edu.cfuahjovyrht.ap-south-1.rds.amazonaws.com
+      MYSQL_DBHOST: rds19may2025.cfuahjovyrht.ap-south-1.rds.amazonaws.com
       MYSQL_DATABASE: somaiya_com_stage
       MYSQL_DBUSER: arigel
       MYSQL_DBPASS: "t)2D#+qDgkG8U-MN"
