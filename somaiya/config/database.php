@@ -76,7 +76,7 @@ $query_builder = TRUE;
 $env = getenv('ENV') ?: 'production';
 $hostname = ($env === 'local') 
     ? (getenv('MYSQL_DBHOST') ?: 'mysql') 
-    : 'somaiya-edu.cfuahjovyrht.ap-south-1.rds.amazonaws.com';
+    : 'rds19may2025.cfuahjovyrht.ap-south-1.rds.amazonaws.com';
 
 $username = ($env === 'local') 
     ? (getenv('MYSQL_DBUSER') ?: 'arigel') 
