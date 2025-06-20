@@ -107,6 +107,7 @@ $db['default'] = array(
     'password' => $password,
     'database' => $database,
     'dbdriver' => 'mysqli',
+    'port'     => 3307, 
     'dbprefix' => '',
     'pconnect' => FALSE,
     'db_debug' => (ENVIRONMENT !== 'production'),
