@@ -27,7 +27,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: codeigniter-app
+    container_name: somaiyacom-app
     environment:
       ENV: local  # Change to 'production' on AWS
       MYSQL_DBHOST: rds19may2025.cfuahjovyrht.ap-south-1.rds.amazonaws.com
