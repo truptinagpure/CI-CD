@@ -35,7 +35,7 @@ services:
       MYSQL_DBUSER: arigel
       MYSQL_DBPASS: "t)2D#+qDgkG8U-MN"
     ports:
-      - "8081:80"
+      - "8000:80"
     depends_on:
       - mysql
     networks:
