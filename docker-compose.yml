@@ -8,7 +8,7 @@ networks:
 services:
   mysql:
     image: mysql:8.0.40
-    container_name: codeigniter-db
+    container_name: somaiyacom-db
     environment:     
       MYSQL_ROOT_PASSWORD: test123
       MYSQL_DATABASE: somaiya_com_stage
