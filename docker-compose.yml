@@ -14,8 +14,6 @@ services:
       MYSQL_DATABASE: somaiya_com_stage
       MYSQL_USER: arigel
       MYSQL_PASSWORD: "t)2D#+qDgkG8U-MN"
-    ports:
-      - "3306:3306"
     volumes:
       - datafiles:/var/lib/mysql
     command: --default-authentication-plugin=mysql_native_password
