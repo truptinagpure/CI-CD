@@ -1,11 +1,9 @@
-# Use PHP 7.0.3 with Apache
+# Use a lighter PHP Apache image
 FROM php:7.1.27-apache
 
-# Install required PHP extensions
-RUN docker-php-ext-install mysqli pdo pdo_mysql
-
-# Enable mod_rewrite for CodeIgniter
-RUN a2enmod rewrite
+# Install extensions early to take advantage of layer caching
+RUN docker-php-ext-install mysqli pdo pdo_mysql \
+    && a2enmod rewrite
 
 # Enable .htaccess override
 RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
@@ -13,15 +11,20 @@ RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/Allo
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy project files
+# Copy only required files first (for caching)
+COPY composer.json composer.lock /var/www/html/
+
+# Run composer early if you use it (for dependency layer caching)
+# RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+#     && composer install
+
+# Now copy the rest of the app
 COPY . /var/www/html
 
-# Set file permissions
+# Set minimal permissions
 RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html
+    && find /var/www/html -type d -exec chmod 755 {} \; \
+    && find /var/www/html -type f -exec chmod 644 {} \;
 
-# Expose Apache port
 EXPOSE 80
-
-# Start Apache server
 CMD ["apache2-foreground"]
