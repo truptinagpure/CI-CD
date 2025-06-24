@@ -1,30 +1,27 @@
-# Use a lighter PHP Apache image
+# Use PHP 7.1.27 with Apache
 FROM php:7.1.27-apache
 
-# Install extensions early to take advantage of layer caching
-RUN docker-php-ext-install mysqli pdo pdo_mysql \
-    && a2enmod rewrite
+# Install required PHP extensions
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Enable .htaccess override
+# Enable mod_rewrite for CodeIgniter
+RUN a2enmod rewrite
+
+# Allow .htaccess to work
 RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy only required files first (for caching)
-COPY composer.json composer.lock /var/www/html/
-
-# Run composer early if you use it (for dependency layer caching)
-# RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-#     && composer install
-
-# Now copy the rest of the app
+# Copy project files
 COPY . /var/www/html
 
-# Set minimal permissions
+# Set correct permissions
 RUN chown -R www-data:www-data /var/www/html \
-    && find /var/www/html -type d -exec chmod 755 {} \; \
-    && find /var/www/html -type f -exec chmod 644 {} \;
+    && chmod -R 755 /var/www/html
 
+# Expose Apache port
 EXPOSE 80
+
+# Start Apache server
 CMD ["apache2-foreground"]
