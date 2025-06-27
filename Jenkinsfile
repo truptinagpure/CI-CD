@@ -81,4 +81,32 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            emailext(
+                subject: "✅ SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: """
+                    <p><b>Status:</b> SUCCESS</p>
+                    <p><b>Job:</b> ${env.JOB_NAME}</p>
+                    <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+                    <p><b>URL:</b> <a href='${env.BUILD_URL}'>Click here</a></p>
+                """,
+                to: 'trupti15nagpure@gmail.com'
+            )
+        }
+
+        failure {
+            emailext(
+                subject: "❌ FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: """
+                    <p><b>Status:</b> FAILURE</p>
+                    <p><b>Job:</b> ${env.JOB_NAME}</p>
+                    <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+                    <p><b>URL:</b> <a href='${env.BUILD_URL}'>Click here</a></p>
+                """,
+                to: 'trupti15nagpure@gmail.com'
+            )
+        }
+    }
 }
